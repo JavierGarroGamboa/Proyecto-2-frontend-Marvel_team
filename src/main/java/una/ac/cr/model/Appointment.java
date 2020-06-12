@@ -3,14 +3,14 @@ package una.ac.cr.model;
 
 
 /**
- * Appointment Model
+ * APPOINTMENT Model
  *
  * @author JavierGarro, JosuaEsquivel
  */
 
 
 /**
- * Entity Appointment
+ * Entity APPOINTMENT
  */
 
 public class Appointment {
@@ -98,7 +98,7 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return "Appointment{" +
+        return "APPOINTMENT{" +
                 "id_appointment=" + id_appointment +
                 ", doctorOffice='" + doctorOffice +
                 ", doctor='" + doctor +

@@ -19,14 +19,14 @@ public class AppointmentController {
     // Using logger for project
     final Logger logger = LogManager.getLogger(AppointmentController.class);
 
-    // Appointment Model
+    // APPOINTMENT Model
     private List<Appointment> listAppointmentModel;
-    //Appointment Service
+    //APPOINTMENT Service
     private AppointmentService appointmentService;
     // Vector for the Data Table
     private Vector<Vector<String>> dataVector;
 
-    //Appointment View
+    //APPOINTMENT View
     AppointmentView appointmentView;
 
     public AppointmentController() {
@@ -49,7 +49,7 @@ public class AppointmentController {
      */
     private void actualizar() {
         dataVector = loadDataFromAppointmentService(0);
-        appointmentView.getTableModel().setDataVector(dataVector, Constants.TABLE_HEADER_Appointment);
+        appointmentView.getTableModel().setDataVector(dataVector, Constants.TABLE_HEADER_APPOINTMENT);
     }
 
 
@@ -84,14 +84,14 @@ public class AppointmentController {
                 Vector<String> appointmentVector = dataVector.elementAt(0);
                 logger.debug("Data found: " + dataVector.size());
 
-                appointmentView.getTableModel().setDataVector(dataVector, Constants.TABLE_HEADER_Appointment);
+                appointmentView.getTableModel().setDataVector(dataVector, Constants.TABLE_HEADER_APPOINTMENT);
 
             } else {
                 dataVector = loadDataFromAppointmentService(0);
                 appointmentView.getTextFielFilter().setText("");
                 logger.debug("Data found: " + dataVector.size());
 
-                appointmentView.getTableModel().setDataVector(dataVector, Constants.TABLE_HEADER_Appointment);
+                appointmentView.getTableModel().setDataVector(dataVector, Constants.TABLE_HEADER_APPOINTMENT);
             }
 
 

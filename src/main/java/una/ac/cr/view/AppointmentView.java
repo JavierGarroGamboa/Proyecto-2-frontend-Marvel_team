@@ -3,12 +3,10 @@ package una.ac.cr.view;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import una.ac.cr.Constants;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.util.Vector;
 
 
 public class AppointmentView extends JFrame {
@@ -23,7 +21,7 @@ public class AppointmentView extends JFrame {
     private JTable table;
     private DefaultTableModel tableModel;
 
-    public AppointmentView(String titleView, Vector<String> sevicios){
+    public AppointmentView(String titleView){
         super(titleView);
 
         // Using logger for project
@@ -32,7 +30,7 @@ public class AppointmentView extends JFrame {
         logger.debug("Design Pattern MVC: [VIEW]");
 
         this.getContentPane().setBackground(Color.lightGray);
-        this.setSize(1300, 750);
+        this.setSize(750, 400);
         this.setLocationRelativeTo(this);
         this.setLayout(null);
         this.setVisible(true);
@@ -40,16 +38,16 @@ public class AppointmentView extends JFrame {
 
 
         buttonConfirm = new JButton("Confirm");
-        buttonConfirm.setBounds(450, 325, 100, 30);
+        buttonConfirm.setBounds(500, 25, 100, 30);
         buttonConfirm.setName("save");
 
         labelFilter = new JLabel("Filter");
         labelFilter.setName("labelFilter");
-        labelFilter.setBounds(500,30,150,20);
+        labelFilter.setBounds(200,30,150,20);
 
         textFielFilter= new JTextField();
         textFielFilter.setName("textFielFilter");
-        textFielFilter.setBounds(500,375,150,20);
+        textFielFilter.setBounds(240,30,150,20);
 
         table = new JTable();
         tableModel = new DefaultTableModel();
@@ -59,7 +57,7 @@ public class AppointmentView extends JFrame {
         table.setModel(tableModel);
 
         JScrollPane scrollPane = new JScrollPane(table);
-        scrollPane.setBounds(10, 410, 1260, 250);
+        scrollPane.setBounds(17, 80, 700, 250);
 
 
         add(labelFilter);

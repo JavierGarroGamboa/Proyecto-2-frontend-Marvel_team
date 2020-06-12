@@ -54,6 +54,6 @@ public class SwingMVCExample {
     public static void createAndShowGUI() throws Exception {
         logger.debug("Running the MVC Example - Calling the Controller");
 
-       AppointmentView menusController= new AppointmentView();
+       AppointmentView appointmentView= new AppointmentView("APPOINTMENT");
     }
 }

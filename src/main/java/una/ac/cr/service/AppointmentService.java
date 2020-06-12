@@ -17,7 +17,7 @@ public class AppointmentService {
     // Using logger for project
     final Logger logger = LogManager.getLogger(AppointmentService.class);
 
-    private static final String REST_URI = Constants.WS_ENDPOINT.concat(Constants.Appointment);
+    private static final String REST_URI = Constants.WS_ENDPOINT.concat(Constants.APPOINTMENT);
 
     private Client client = null;
 
@@ -55,11 +55,11 @@ public class AppointmentService {
     /**
      * This method will load all the data from the WS
      *
-     * @return the list of Appointment
+     * @return the list of APPOINTMENT
      */
     public List<Appointment> loadAllAppointment() {
 
-        logger.debug("Obteniendo toda la lista de Appointment");
+        logger.debug("Obteniendo toda la lista de APPOINTMENT");
 
         // Library Jackson parse JSon
         List<Appointment> appointmentList = null;
