@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import una.ac.cr.Controller.AppointmentController;
 import una.ac.cr.view.AppointmentView;
 
 import javax.swing.*;
@@ -54,6 +55,6 @@ public class SwingMVCExample {
     public static void createAndShowGUI() throws Exception {
         logger.debug("Running the MVC Example - Calling the Controller");
 
-       AppointmentView appointmentView= new AppointmentView("APPOINTMENT");
+        AppointmentController appointmentController= new AppointmentController();
     }
 }

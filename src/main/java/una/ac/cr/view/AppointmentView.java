@@ -17,6 +17,7 @@ public class AppointmentView extends JFrame {
     private JTextField textFielFilter;
 
     private JButton buttonConfirm;
+    private JButton buttonFilter;
 
     private JTable table;
     private DefaultTableModel tableModel;
@@ -30,7 +31,7 @@ public class AppointmentView extends JFrame {
         logger.debug("Design Pattern MVC: [VIEW]");
 
         this.getContentPane().setBackground(Color.lightGray);
-        this.setSize(750, 400);
+        this.setSize(1300, 750);
         this.setLocationRelativeTo(this);
         this.setLayout(null);
         this.setVisible(true);
@@ -40,6 +41,9 @@ public class AppointmentView extends JFrame {
         buttonConfirm = new JButton("Confirm");
         buttonConfirm.setBounds(500, 25, 100, 30);
         buttonConfirm.setName("save");
+        buttonFilter = new JButton("Filter");
+        buttonFilter.setBounds(390, 25, 100, 30);
+        buttonFilter.setName("filter");
 
         labelFilter = new JLabel("Filter");
         labelFilter.setName("labelFilter");
@@ -57,11 +61,12 @@ public class AppointmentView extends JFrame {
         table.setModel(tableModel);
 
         JScrollPane scrollPane = new JScrollPane(table);
-        scrollPane.setBounds(17, 80, 700, 250);
+        scrollPane.setBounds(10, 100, 1260, 550);
 
 
         add(labelFilter);
         add(buttonConfirm);
+        add(buttonFilter);
         add(textFielFilter);
         add(scrollPane);
     }
@@ -89,6 +94,15 @@ public class AppointmentView extends JFrame {
     public void setButtonConfirm(JButton buttonConfirm) {
         this.buttonConfirm = buttonConfirm;
     }
+
+    public JButton getButtonFilter() {
+        return buttonFilter;
+    }
+
+    public void setButtonFilter(JButton buttonFilter) {
+        this.buttonFilter = buttonFilter;
+    }
+
     public JTable getTable() {
         return table;
     }
@@ -104,5 +118,4 @@ public class AppointmentView extends JFrame {
     public void setTableModel(DefaultTableModel tableModel) {
         this.tableModel = tableModel;
     }
-
 }
